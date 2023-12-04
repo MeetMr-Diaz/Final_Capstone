@@ -91,41 +91,6 @@
   
 <!-- LightWidget WIDGET for Instagram -->
 <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-<section class="flex">
- 
-  <div id="menu-btn" class="fa-solid fa-bars-staggered" style="color: #ffffff;"></div>
-
-  <a href="https://umkc.edu/">
-     <img src="images/umkcLogoWhite (1).png" width="125" height="75">
-  </a>
-
-  <nav class="navbar">
-     <a href="/">home</a>
-     <a href="/jobs">all jobs</a>
-     <a href="/contact">contact us</a>
-
-
-     <% if(user) { %>
-       <% if(user.role === 'admin') { %>
-         <a href="/create_job">Create New Job</a>
-         <a href="/admin">Applicant List</a>
-         <a href="/adminJobList">Job List</a>
-       <% } else { %>
-
-         <a href="/studentApp" >Application Status</a>
-       <% } %>
-       <a href="/logout">Logout</a>
-     <% } else { %>
-
-       <a href="/login"">Login</a>
-     <% } %>
-     
-  </nav>
-
- 
-  
-
-</section>
 <!-- LightWidget WIDGET for Instagram -->
 <!-- /.Homepage CSS -->
 <!-- <link href="https://umkc.edu/_files/css/homepage.css" rel="stylesheet"/> -->
