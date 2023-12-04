@@ -1,0 +1,133 @@
+<div class="breadcrumbs 123">
+    <div class="content-wrapper">
+    <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/editJob">Edit Job</a>
+    </div>
+  </div>
+
+<body>
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1>Job Application</h1>
+        </div>
+        <form action="/editJob/<%= job._id %>" method="POST">
+            <input type="hidden" name="id" value="<%= job._id %>">
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <div class="row flex-fill">
+                            <div class="col-sm-6">
+                                <!-- Use the label and input elements from the first code -->
+                                <label for="JobTitle">Job Title</label>
+                                <input type="text" name="JobTitle" id="JobTitle" placeholder="Job Title" required value ="<%= job.JobTitle %>">
+                            </div>
+
+
+                            <div class="col-sm-6">
+                                <label for="classNumber">Class Number</label>
+                                <input type="text" name="classNumber" id="classNumber" placeholder="Class Number"
+                                    required value="<%= job.classNumber %>">
+                            </div>
+
+                            <div class="col-sm-6">
+                                <!-- Use the label and input elements from the first code -->
+                                <label for="jobType">Job Type</label>
+                                <input type="text" name="jobType" id="jobType" placeholder="Job Type" required value ="<%= job.jobType %>">
+                            </div>
+
+                            <div class="col-sm-6">
+                                <!-- Use the label and input elements from the first code -->
+                                <label for="scheduleType">Schedule</label>
+                                <input type="text" name="scheduleType" id="scheduleType" placeholder="part-time/fultime"
+                                    required value="<%= job.scheduleType %>">
+                            </div>
+                            <div class="col-sm-6 ">
+                                <!-- Use the label and input elements from the first code -->
+                                <label for="location">Job Location</label>
+                                <input type="text" name="location" id="location" placeholder="Job Location" required value="<%= job.location %>">
+                            </div>
+                            
+                            <div class="col-sm-6">
+                                <label for="description">Job Description</label>
+                                <textarea name="description" id="description" class="form-control" cols="15" rows="5" placeholder="Job Description" required><%= job.description %></textarea>
+
+                            </div>
+                            
+                            <div class="col-sm-6 py-2">
+                                <!-- Use the label and input elements from the first code -->
+                                <label for="payRate">Job Salary</label>
+                                <input type="text" name="payRate" id="payRate" placeholder="Job Salary" required value="<%= job.payRate %>">
+                            </div>
+
+                            <div class="col-sm-6 py-2">
+                                <!-- Use the label and input elements from the first code -->
+                                <label for="education">Job Education</label>
+                                <input type="text" name="education" id="education" placeholder="Job Education"
+                                    required value="<%= job.education %>">
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- Use the label and input elements from the first code -->
+                                <label for="experience">Job Experience</label>
+                                <input type="text" name="experience" id="experience" placeholder="Job Experience"
+                                    required value="<%= job.experience %>">
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- Use the label and input elements from the first code -->
+                                <label for="skills">Job Skills</label>
+                                <input type="text" name="skills" id="skills" placeholder="Job Skills" required value="<%= job.skills %>">
+                            </div>
+
+                            <div class="col-sm-6">
+                                <!-- Use the label and input elements from the first code -->
+                                <label for="dateposted">Job Posted On</label>
+                                <input type="text" name="dateposted" id="dateposted" placeholder="MM/DD/YYYY" maxLength="10" required value="<%= job.datepostedFmt %>">
+                                    <span id="datepostedError" class="text-danger"></span>
+                            </div>
+                            <div class="col-sm-6 py-2">
+                                <!-- Use the label and input elements from the first code -->
+                                <label for="deadline">Job Deadline</label>
+                                <input type="text" name="deadline" id="deadline" placeholder="MM/DD/YYYY" maxLength="10" required value="<%= job.deadlineFmt %>">
+                                <span id="deadlineError" class="text-danger"></span>
+                            </div>
+                            <!-- Change "Apply" to "Submit" -->
+                            <div class="col-sm-6 text-lg-end py-2">
+                                <button type="submit" class="btn btn-primary">
+                                    Submit
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    let dateposted = document.getElementById('dateposted').value;
+    let deadline = document.getElementById('deadline').value;
+
+    let isDatepostedValid = validateDate(dateposted, 'datepostedError');
+    let isDeadlineValid = validateDate(deadline, 'deadlineError');
+
+    if (!isDatepostedValid || !isDeadlineValid) {
+        e.preventDefault();
+    }
+});
+
+function validateDate(date, errorElementId) {
+    if (!/^\d{2}\/\d{2}\/\d{4}$/.test(date)) {
+        document.getElementById(errorElementId).textContent = "Error: Date must be mm/dd/yyyy";
+        return false;
+    } else {
+        document.getElementById(errorElementId).textContent = "";
+        return true;
+    }
+}
+
+</script>
+
+</body>

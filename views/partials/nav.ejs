@@ -1,0 +1,292 @@
+<!--
+<header class="header">
+    <section class="flex">
+ 
+       <div id="menu-btn" class="fa-solid fa-bars-staggered" style="color: #ffffff;"></div>
+ 
+       <a href="https://umkc.edu/">
+          <img src="images/umkcLogoWhite (1).png" width="125" height="75">
+       </a>
+ 
+       <nav class="navbar">
+          <a href="/">home</a>
+          <a href="/jobs">all jobs</a>
+          <a href="/contact">contact us</a>
+
+
+          <% if(user) { %>
+            <% if(user.role === 'admin') { %>
+              <a href="/create_job">Create New Job</a>
+              <a href="/admin">Applicant List</a>
+              <a href="/adminJobList">Job List</a>
+            <% } else { %>
+
+              <a href="/studentApp" >Application Status</a>
+            <% } %>
+            <a href="/logout">Logout</a>
+          <% } else { %>
+
+            <a href="/login"">Login</a>
+          <% } %>
+          
+       </nav>
+ 
+      
+       
+ 
+    </section>
+ </header>
+-->
+
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport"/>
+  <meta content="" name="author"/>
+  <meta content="6k8m3b4kYGP1jdzONx9e4EX9tF+Pyqqbgzj7DpOW+w4=" name="verify-v1"/>
+  <meta content="US-MO" name="geo.region"/>
+    <meta content="Kansas City, Missouri" name="geo.placename"/>
+    <meta content="index, follow" name="robots"/>
+
+  <title>
+     Academics | University of Missouri - Kansas City
+  </title>
+  
+    <meta content="With more than 125 academic areas to choose from, UMKC has something for everyone.  Explore our academic programs, majors and schools to find the best fit for you. " name="description"/>
+    <!-- Social Cards -->
+  
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="University of Missouri-Kansas City" itemprop="itemprop:name"/>
+<meta content="University of Missouri-Kansas City" name="twitter:title"/>
+<meta content="@umkansascity" name="twitter:site"/>
+<meta content="Explore UMKC, a comprehensive, urban research university with award-winning academic programs and a diverse, inclusive campus in the heart of Kansas City." name="twitter:description"/>
+<meta content=" Explore UMKC, a comprehensive, urban research university with award-winning academic programs and a diverse, inclusive campus in the heart of Kansas City." itemprop="itemprop:description"/>
+<meta content="https://umkc.edu/global-assets/images/social cards/logo_160x160.jpg" itemprop="itemprop:image"/>
+<meta content="The University of Missouri-Kansas City" property="og:title"/>
+<meta content="Explore UMKC, a comprehensive, urban research university with award-winning academic programs and a diverse, inclusive campus in the heart of Kansas City." property="og:description"/>
+<meta content="University of Missouri-Kansas City " name="twitter:image:alt"/>
+<meta content="https://umkc.edu/global-assets/images/social cards/social_1024x512.jpg" name="twitter:image"/>
+<meta content="https://umkc.edu/global-assets/images/social cards/social-large_1200x630.jpg" property="og:image:secure_url"/>
+<meta content="true" name="HandheldFriendly"/>
+<link href="https://www.umkc.edu/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+  <!-- /.Social Cards-->
+  <!-- Bootstrap Core CSS and Global CSS -->
+  
+<link href="https://www.umkc.edu/global-assets/css/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://www.umkc.edu/global-assets/css/bootstrap/bootstrap-grid.min.css" rel="stylesheet"/>
+<link href="https://www.umkc.edu/global-assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<!--<link href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css" rel="stylesheet"/>-->
+<!-- Global CSS -->
+<link href="https://www.umkc.edu/global-assets/css/global.css" rel="stylesheet"/>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+  <!-- /.Bootstrap Core CSS and Global CSS-->
+  <!-- Local CSS -->
+  
+<!-- LightWidget WIDGET for Instagram -->
+<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+<!-- LightWidget WIDGET for Instagram -->
+<!-- /.Homepage CSS -->
+<!-- <link href="https://umkc.edu/_files/css/homepage.css" rel="stylesheet"/> -->
+<!-- /.Homepage CSS -->
+<link href="https://umkc.edu/_files/css/local.css" rel="stylesheet"/>
+<link href="https://umkc.edu/_files/css/local-email.css" rel="stylesheet"/>
+
+
+  <!-- /.Local CSS-->
+  <!-- Google Tag Manager -->
+  <!-- Google Tag Manager -->
+<script>// <![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TV3GXX2');
+// ]]></script>
+<!-- End Google Tag Manager -->
+<script async="async" src="https://futureroo.umkc.edu/ping">// <![CDATA[
+/**/
+// ]]></script>
+  <!-- /.Google Tag Manager-->
+</head>
+<body>
+  <!-- Google Tag Manager -->
+  <!-- Google Tag Manager (noscript) --><!-- End Google Tag Manager (noscript) --><noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TV3GXX2" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+  <!-- /.Google Tag Manager-->
+  <!-- Header -->
+  <div class="container-fluid header-container bg-umkc-blue header-blue-strips" id="header">
+<div class="row p-2">
+    <div class="col-xl-5 col-lg-5 col-md-12 align-self-center">
+        <h1 class="text-md-left text-center"><a class="text-white font-weight-bold" href="https://umkc.edu/index.html">University of Missouri-Kansas city</a></h1>
+    </div>
+    
+            
+                        <div class="col-xl-7 col-lg-7 col-md-12 align-self-center text-white header-menu-item">
+            <ul>
+                                                                    
+                                                                                
+                        
+                                                       <li> <a class="text-white font-weight-bold" href="https://futureroo.umkc.edu/apply/">Apply</a></li>                    
+                                                                            
+                                                                                
+                        
+                                                       <li> <a class="text-white font-weight-bold" href="https://www.umkc.edu/admissions/get-info.html">Get Info</a></li>                    
+                                                                            
+                                                                                
+                        
+                                                       <li> <a class="text-white font-weight-bold" href="https://securelb.imodules.com/s/1236/16/index-sub-blank.aspx?sid=1236&amp;gid=1&amp;pgid=2819&amp;cid=5282&amp;appealcode=GOONLINE">Give</a></li>                    
+                                                                                        
+                <li><span class="mx-3">|</span>  </li>
+                                                                                                    <li><a class="text-white" href="https://umkc.edu/current-students/index.html">Current Students</a></li>                      
+                                                                                                            <li><a class="text-white" href="https://umkc.edu/faculty/index.html">Faculty</a></li>                      
+                                                                                                            <li><a class="text-white" href="https://umkc.edu/staff/index.html">Staff</a></li>                      
+                                                                                                            <li><a class="text-white" href="https://umkc.edu/families/index.html">Families</a></li>                      
+                                                                                    </ul>
+        </div>
+        </div>
+</div>
+  <!-- /.Header -->
+  <!-- Site Header -->
+  <div class="container-fluid homesuite-header-container bg-umkc-blue">
+<div class="row">
+<div class="col-lg-6 align-self-center text-md-left text-center"><a class="navbar-brand" href="https://umkc.edu/index.html"> <img alt="UMKC Logo" class="img-fluid header-title-logo" src="https://www.umkc.edu/global-assets/images/umkc_white_cropped2.png" title="UMKC Logo"/></a></div>
+<div class="col-lg-6 align-self-center text-md-left text-center">
+<div id="gcse-searchbox-only"></div>
+<script>// <![CDATA[
+var gcseDiv = document.getElementById('gcse-searchbox-only');
+            gcseDiv.innerHTML = '<gcse:searchbox-only resultsUrl="/search.html" enableAutoComplete="true"></gcse:searchbox-only>'
+// ]]></script>
+<script>// <![CDATA[
+(function () {
+                    var cx = '009448580219169355531:zaqt1kohfz5';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                })();
+// ]]></script>
+</div>
+</div>
+</div>
+  <!-- /.Site Header -->
+  <!-- Site Header -->
+  
+
+  <!-- /.Site Header -->
+  <!-- Sticky Header -->
+  
+<div class="container-fluid sd-sticky-header bg-umkc-blue">
+<div class="row p-2">
+  <div class="col-xl-9 col-md-6 align-self-center">
+     <div class="logo text-md-left text-center">
+        <a class="navbar-brand" href="https://umkc.edu/index.html" target="_parent">
+           <img alt="UMKC Logo" class="img-fluid" src="https://www.umkc.edu/global-assets/images/umkc_white_cropped2.png" title="UMKC Logo"/>
+        </a>
+     </div>
+  </div>
+  <div class="col-xl-3 col-md-6 align-self-center text-md-right text-center bg-light-gray">
+      <ul class="cta-list bg-white text-center">
+                          <li class="cta-list-item"><a class="text-umkc-blue" href="https://futureroo.umkc.edu/apply/">Apply</a></li>
+            <li class="cta-list-item"><a class="text-umkc-blue" href="https://www.umkc.edu/admissions/get-info.html">Get Info</a></li>
+            <li class="cta-list-item"><a class="text-umkc-blue" href="https://securelb.imodules.com/s/1236/16/index-sub-blank.aspx?sid=1236&amp;gid=1&amp;pgid=2819&amp;cid=5282&amp;appealcode=GOONLINE">Give</a></li>  
+         </ul>
+  </div>
+</div>
+</div>
+  <!-- /.Sticky Header -->
+  <!-- Navigation -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-umkc-dark-blue">
+<button aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarTogglerDemo01" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="umkc-btn umkc-white-border d-lg-none" role="button" style="margin: 10px auto; padding: 5px 28px;" tabindex="0">
+    <a class="text-umkc-white py-3" href="https://www.umkc.edu/admissions/apply/index.html" target="_parent">Apply</a>
+</div>
+<div class="umkc-btn umkc-white-border d-lg-none" role="button" style="margin: 10px auto; padding: 5px 28px;" tabindex="0">
+    <a class="text-umkc-white py-3" href="https://www.umkc.edu/admissions/get-info.html" target="_parent">Get Info</a>
+</div>
+<div class="umkc-btn umkc-white-border d-lg-none" role="button" style="margin: 10px auto; padding: 5px 28px;" tabindex="0">
+    <a class="text-umkc-white py-3" href="https://securelb.imodules.com/s/1236/16/index-sub-blank.aspx?sid=1236&amp;gid=1&amp;pgid=2819&amp;cid=5282&amp;appealcode=GOONLINE" target="_parent">Give</a>
+</div>
+
+
+<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav m-auto mt-2 mt-lg-0">     
+                                            <li class="nav-item">
+                        
+<a class="nav-link text-white" href="https://www.umkc.edu/admissions/index.html">    Admissions
+</a>
+                </li>
+                                                            <li class="nav-item">
+                            
+<a class="nav-link text-white" href="index.html">    Academics
+</a>
+                </li>
+                                                            <li class="nav-item">
+                            
+<a class="nav-link text-white" href="https://umkc.edu/student-life/index.html">    Student Life
+</a>
+                </li>
+                                                            <li class="nav-item">
+                            
+<a class="nav-link text-white" href="https://umkc.edu/athletics/index.html">    Athletics
+</a>
+                </li>
+                                                            <li class="nav-item">
+                            
+<a class="nav-link text-white" href="https://umkc.edu/research/index.html">    Research
+</a>
+                </li>
+                                                            <li class="nav-item">
+                            
+<a class="nav-link text-white" href="https://umkc.edu/alumni-and-giving/index.html">    Alumni and Giving
+</a>
+                </li>
+                                                            <li class="nav-item">
+                            
+<a class="nav-link text-white" href="https://umkc.edu/about/index.html">    About
+</a>
+                </li>
+                                    <li class="nav-item quick-link-mobile">
+            <a class="nav-link text-white" href="https://umkc.edu/current-students/index.html">Current Students</a>
+        </li>
+        <li class="nav-item quick-link-mobile">
+            <a class="nav-link text-white" href="https://umkc.edu/faculty/index.html">Faculty</a>
+        </li>
+        <li class="nav-item quick-link-mobile">
+            <a class="nav-link text-white" href="https://umkc.edu/staff/index.html">Staff</a>
+        </li>
+        <li class="nav-item quick-link-mobile">
+            <a class="nav-link text-white" href="https://umkc.edu/families/index.html">Families</a>
+        </li>
+    </ul> 
+</div>
+</nav>

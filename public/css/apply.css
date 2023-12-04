@@ -1,0 +1,58 @@
+.application-container{
+   background: url('../images/umkc3.jpg'), rgba(0,0,0,.7) no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   background-blend-mode: color;
+}
+
+.application-container .application-form{
+   min-height: 80vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.application-container .application-form form{
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding:3rem 2rem;
+   width: 100rem;
+   text-align: center;
+}
+
+.application-container .application-form form h3{
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+   margin-bottom: 1rem;
+}
+
+.application-container .application-form form .input{
+   width: 100%;
+   margin: 1rem 0;
+   font-size: 1.8rem;
+   padding: 1.4rem;
+   background-color: var(--light-bg);
+   border-radius: .5rem;
+}
+
+.application-container .application-form form p{
+   padding: 1rem 0;
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+.application-container .application-form form p a{
+   color: var(--main-color);
+}
+
+.application-container .application-form form p a:hover{
+   color: var(--black);
+   text-decoration: underline;
+}
+
+.application-container .application-form form .flex .box{
+   font-size: 1.5rem;
+}
+

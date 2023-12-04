@@ -1,0 +1,123 @@
+<div class="breadcrumbs 123">
+    <div class="content-wrapper">
+    <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/admin">Job List</a>
+    </div>
+  </div>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Job Details</h1>
+               
+                <table id="jobDetailsTable" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Class Number</th>
+                            <th>Job Type</th>
+                            <th>Schedule Type</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                            <th>Pay Rate</th>
+                            <th>Education</th>
+                            <th>Experience</th>
+                            <th>Skills</th>
+                            <th>Date Posted</th>
+                            <th>Deadline</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% joblist.forEach(job => { %>
+                            <tr>
+                                <td><%= job.JobTitle %></td>
+                                <td><%= job.classNumber %></td>
+                                <td><%= job.jobType %></td>
+                                <td><%= job.scheduleType %></td>
+                                <td><%= job.location %></td>
+                                <td><%= job.description %></td>
+                                <td><%= job.payRate %></td>
+                                <td><%= job.education %></td>
+                                <td><%= job.experience %></td>
+                                <td><%= job.skills %></td>
+                                <td><%= job.dateposted %></td>
+                                <td><%= job.deadline %></td>
+                                <td>
+                                    <form method="POST" action="/adminJobList/<%= job._id %>" >
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/editJob/<%= job._id %>" method="GET">
+                                        <button type="submit" class="btn btn-primary">Edit</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="photo-tiles-outro">
+        <a class="text-umkc-white py-3"></a></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#jobDetailsTable').DataTable();
+            });
+        </script>
+    <script>
+        $(document).ready(function() {
+
+            $('#jobDetailsTable').DataTable();
+
+
+            $('#searchBtn').on('click', function() {
+                var searchInput = $('#searchInput').val();
+
+
+                $.ajax({
+                    url: '/search', // Update the URL to your search route
+                    method: 'POST',
+                    data: {
+                        title: searchInput
+                    },
+                    success: function(data) {
+                        dataTable.clear().draw();
+                        data.forEach(function(job) {
+                            dataTable.row.add([
+                                job.JobTitle,
+                                job.classNumber,
+                                job.jobType,
+                                job.scheduleType,
+                                job.location,
+                                job.description,
+                                job.payRate,
+                                job.education,
+                                job.experience,
+                                job.skills,
+                                job.dateposted,
+                                job.deadline
+                            ]).draw();
+                        });
+                    },
+                    error: function(err) {
+                        console.error(err);
+                    }
+                });
+            });
+        });
+    </script>
+</body>

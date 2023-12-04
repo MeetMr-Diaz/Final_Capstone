@@ -1,0 +1,88 @@
+.account-form-container{
+    background: url('../images/umkc2.jpg'), rgba(0,0,0,.7) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: color;
+ }
+ 
+ .account-form-container .account-form{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .account-form-container .account-form form{
+    background-color: const(--white);
+    border-radius: .5rem;
+    padding:3rem 2rem;
+    width: 50rem;
+    text-align: center;
+ }
+ 
+ .account-form-container .account-form form h3{
+    font-size: 2.5rem;
+    color: const(--black);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+ }
+ 
+ .account-form-container .account-form form .input{
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    padding: 1.4rem;
+    background-color: const(--light-bg);
+    border-radius: .5rem;
+ }
+ 
+ .account-form-container .account-form form p{
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: const(--light-color);
+ }
+ 
+ .account-form-container .account-form form p a{
+    color: const(--main-color);
+ }
+ 
+ .account-form-container .account-form form p a:hover{
+    color: const(--black);
+    text-decoration: underline;
+ }
+ 
+ 
+ .account-form-container .account-form .navbar a{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    background-color: const(--main-color);
+    color: const(--white);
+    border-radius: .5rem;
+    text-transform: capitalize;
+    margin-left: 20px;
+    margin-right: 20px;
+ }
+ 
+ .account-form-container .account-form .navbar a:hover{
+    background-color: const(--yellow);
+    color: const(--main-color);
+ }
+ 
+ .account-form-container .account-form .navbar a.active-button {
+    background-color: const(--yellow);
+    color: const(--main-color);
+ }
+
+ .account-form-container #student-login-form .login-button,
+ .account-form-container #admin-login-form .login-button {
+     background-color: const(--main-color);
+     color: const(--white);
+ }
+ 
+ .account-form-container #student-login-form .login-button:hover,
+ .account-form-container #admin-login-form .login-button:hover {
+     background-color: const(--yellow);
+     color: const(--main-color);
+ }

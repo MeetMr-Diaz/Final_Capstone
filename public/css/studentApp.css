@@ -1,0 +1,18 @@
+#applicantTable {
+    width: 100%;
+}
+
+#applicantTable td,
+#applicantTable th {
+    padding: 8px;
+    text-align: center; /* Center text in cells */
+}
+
+@media (max-width: 767px) {
+    #applicantTable td,
+    #applicantTable th {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

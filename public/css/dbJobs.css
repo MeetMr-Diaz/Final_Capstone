@@ -1,0 +1,6 @@
+    .job-details {
+        border: 1px solid #ccc; /* Add a 1px solid border */
+        padding: 10px; /* Add some padding to create space around each job */
+        margin-bottom: 10px; /* Add margin to separate each job container */
+        font-size: large;
+    }

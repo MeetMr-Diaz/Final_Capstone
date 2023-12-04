@@ -1,0 +1,22 @@
+#applicantTable {
+    width: 80%; /* Adjust the value as needed */
+    margin: 0 auto; /* Center the table */
+}
+
+#applicantTable td,
+#applicantTable th {
+    padding: 8px; /* Adjust the padding as needed */
+}
+
+@media (max-width: 767px) {
+    #applicantTable {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    #applicantTable td,
+    #applicantTable th {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
