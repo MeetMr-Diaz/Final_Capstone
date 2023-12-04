@@ -13,9 +13,9 @@
         <div class="row">
             <div class="col-sm-12">
                 <h1>Student Dashboard</h1>
-                <div class="umkc-btn umkc-btn-dark button-2 my-5" role="button" tabindex="0">
+                <!-- <div class="umkc-btn umkc-btn-dark button-2 my-5" role="button" tabindex="0">
                     <a class="text-umkc-white py-3" href="/editApplicant">Edit Application</a>
-                </div>
+                </div> -->
                 <div class="table-responsive">
                 <table id="applicantTable" class="table table-striped">
                     <thead>
@@ -34,6 +34,7 @@
                             <th>GTA Certified</th>
                             <th>Courses Able to Teach</th>
                             <th>Application Status</th>
+                            <th>Edit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -53,6 +54,9 @@
                                 <td><%= applicant.GTA %></td>
                                 <td><%= applicant.courses %></td>
                                 <td><%= applicant.status %></td>
+                                <td><form action="/editApplicant/<%= applicant._id %>" method="GET">
+                                    <button type="submit" class="btn btn-primary">Edit</button>
+                                  </form></td>
                                 
                             </tr>
                         <% }); %>
