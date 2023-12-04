@@ -327,18 +327,19 @@ exports.postEditApplicant = async (req, res) => {
       applicantData.degree = req.body.degree;
       applicantData.major = req.body.major;
       applicantData.applyingFor = req.body.applyingFor;
+      applicantData.GTA = req.body.GTA;
       applicantData.courses = req.body.courses;
 
       // Save the updated data to the database
       await applicantData.save();
 
       console.log("Applicant updated successfully");
-      res.redirect("/admin"); // Redirect to the admin page or another appropriate page
-    } else {
-      console.log("Applicant not found");
-      res.json({ success: false, error: "Applicant not found" });
+      if (req.session.user.role === "admin") {
+        return res.redirect("/admin");
+      } else {
+      res.redirect("/studentApp"); // Redirect to the admin page or another appropriate page
     }
-  } catch (err) {
+  }} catch (err) {
     console.log(err);
     res.status(500).json({ success: false, error: "Error updating applicant" });
   }
@@ -380,6 +381,7 @@ exports.postApply = async (req, res) => {
     degree: req.body.degree,
     major: req.body.major,
     applyingFor: req.body.applyingFor,
+    GTA: req.body.GTA,
     courses: req.body.courses,
     hours: req.body.hours,
     userId: req.session.user.userId,
