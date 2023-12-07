@@ -1,16 +1,22 @@
-const { Builder, By, Key, until } = require('selenium-webdriver');
+const { Builder, By, until } = require('selenium-webdriver');
 require('chromedriver');
 
 async function loginTest() {
   let driver;
   try {
     driver = await new Builder().forBrowser('chrome').build();
-    await driver.get('https://hidden-bayou-39635-6fafc891ec3d.herokuapp.com/login');
+    await driver.get('http://localhost:3000/login');
 
-    // Find the username and password input fields and submit button
-    const usernameInput = await driver.findElement(By.name('email'));
-    const passwordInput = await driver.findElement(By.name('password'));
-    const submitButton = await driver.findElement(By.name('submit'));
+    // Wait for the form to be present
+    const loginForm = await driver.wait(until.elementLocated(By.id('student-login-form')), 5000);
+
+    // Scroll into view
+    await driver.executeScript("arguments[0].scrollIntoView(true);", loginForm);
+
+    // Find the email input field and submit button
+    const usernameInput = await loginForm.findElement(By.name('email'));
+    const passwordInput = await loginForm.findElement(By.name('password'));
+    const submitButton = await loginForm.findElement(By.name('submit'));
 
     // Input valid credentials
     await usernameInput.sendKeys('umkc@umkc.com');

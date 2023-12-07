@@ -1,58 +1,107 @@
-.application-container{
+.application-container .application-form {
+   background-color: white;
+   border-radius: 0.5rem;
+   padding: 3rem 2rem;
+   width: 100rem;
+   text-align: center;
+ }
+ 
+ .application-container .application-form form {
+   background-color: transparent;
+ }
+ 
+ .application-container .application-form form h3 {
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+   margin-bottom: 1rem;
+ }
+ 
+ .application-container {
    background: url('../images/umkc3.jpg'), rgba(0,0,0,.7) no-repeat;
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
    background-blend-mode: color;
-}
-
-.application-container .application-form{
-   min-height: 80vh;
+ }
+ 
+ .application-container .application-form form .flex {
    display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-.application-container .application-form form{
-   background-color: var(--white);
-   border-radius: .5rem;
-   padding:3rem 2rem;
-   width: 100rem;
-   text-align: center;
-}
-
-.application-container .application-form form h3{
-   font-size: 2.5rem;
-   color: var(--black);
-   text-transform: capitalize;
+   flex-wrap: wrap;
+   min-height: 80vh;
+   align-items: stretch;
+   justify-content: space-between;
+ }
+ 
+ .application-container .application-form form .box {
+   flex-basis: calc(50% - 1rem);
    margin-bottom: 1rem;
-}
-
-.application-container .application-form form .input{
-   width: 100%;
+ }
+ 
+ .application-container .application-form form .box:nth-child(2n) {
+   margin-right: 0;
+ }
+ 
+ @media (max-width: 767px) {
+   .application-container .application-form form .box {
+     flex-basis: 100%;
+   }
+ }
+ 
+ .application-container .application-form form .input {
    margin: 1rem 0;
    font-size: 1.8rem;
    padding: 1.4rem;
+   border-radius: .5rem;
+   width: 100%;
    background-color: var(--light-bg);
    border-radius: .5rem;
-}
-
-.application-container .application-form form p{
+ }
+ 
+ @media (max-width: 767px) {
+   .application-container .application-form form .box {
+     flex-basis: 100%;
+     margin-right: 0;
+   }
+ }
+ 
+ .application-container .application-form form p {
    padding: 1rem 0;
    font-size: 1.6rem;
    color: var(--light-color);
-}
-
-.application-container .application-form form p a{
+ }
+ 
+ .application-container .application-form form p a {
    color: var(--main-color);
-}
-
-.application-container .application-form form p a:hover{
+ }
+ 
+ .application-container .application-form form p a:hover {
    color: var(--black);
    text-decoration: underline;
-}
-
-.application-container .application-form form .flex .box{
+ }
+ 
+ .application-container .application-form form .flex .box {
    font-size: 1.5rem;
-}
-
+ }
+ 
+ .invalid-field {
+  border: 2px solid red;
+ }
+ 
+ .required-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+ }
+ 
+ .required {
+  color: red;
+  position: absolute;
+  left: 80%;
+ }
+ .application-container .application-form form button.btn {
+   margin: 0 auto; /* Center the button horizontally */
+   display: block; /* Ensure the button is a block-level element */
+ }
+ 
