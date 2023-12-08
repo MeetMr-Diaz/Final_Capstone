@@ -1,4 +1,11 @@
+
 <body>
+  <div class="breadcrumbs 123">
+    <div class="content-wrapper">
+    <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> 
+    </div>
+  </div>
+  
   <div class="application-container">
     <section class="application-form">
       <form id="application-form" action="/apply" method="post">
@@ -16,26 +23,26 @@
 
         <div class="flex">
           <div class="box">
-              <label for="fName">First Name</label>
+            <label for="fName">First Name</label>
             <input type="fName" id="fName" name="fName" placeholder="First Name" class="input" required />
           </div>
           <div class="box">
-              <label for="surname">Surname</label>
+            <label for="surname">Surname</label>
             <input type="surname" id="surname" name="surname" placeholder="Surname" class="input" required />
           </div>
           <div class="box">
-              <label for="studentID">Student ID</label>
+            <label for="studentID">Student ID</label>
             <input type="studentID" id="studentID" name="studentID" placeholder="Student ID" class="input" required />
           </div>
 
           <div class="box">
-              <label for="email">UMKC Email</label>
+            <label for="email">UMKC Email</label>
             <input type="email" id="email" name="email" placeholder="Email" class="input" required />
           </div>
 
 
           <div class="box">
-              <label for="classNum">Class Name & Number</label>
+            <label for="classNum">Class Name & Number</label>
             <input type="classNum" id="classNum" name="classNum" placeholder="Class Number" class="input" required />
           </div>
 
@@ -43,8 +50,8 @@
 
 
           <div class="box">
-              <label for="level">Current Level (BS/MS/PhD)</label>
-            <select id="level" name="level"  class="input" required>
+            <label for="level">Current Level (BS/MS/PhD)</label>
+            <select id="level" name="level" class="input" required>
               <option value="Select From List">Select From List </option>
               <option value="BS">BS</option>
               <option value="MS">MS</option>
@@ -54,7 +61,7 @@
 
 
           <div class="box">
-              <label for="graduatingSemester">Graduating Semester</label>
+            <label for="graduatingSemester">Graduating Semester</label>
             <select id="graduatingSemester" name="graduatingSemester" class="input" required>
               <option value="Select From List">Select From List</option>
               <option value="Spring">Spring</option>
@@ -76,7 +83,7 @@
           <div class="box">
             <label for="hours">Hours Completed at UMKC (leave blank if first semester is in
               progress)</label>
-            <input type="hours" id="hours" name="hours" placeholder="Hours" class="input" required/>
+            <input type="hours" id="hours" name="hours" placeholder="Hours" class="input" required />
           </div>
 
 
@@ -95,7 +102,7 @@
 
 
           <div class="box">
-              <label for="major">Current Major (CS/IT/ECE/EE)</label>
+            <label for="major">Current Major (CS/IT/ECE/EE)</label>
             <select id="major" name="major" class="input" required>
               <option value="Select From List">Select From List</option>
               <option value="CS">CS</option>
@@ -109,7 +116,7 @@
 
 
           <div class="box">
-              <label for="applyingFor">Applying For: (Grader, Lab Instructor, or Both)</label>
+            <label for="applyingFor">Applying For: (Grader, Lab Instructor, or Both)</label>
             <select id="applyingFor" name="applyingFor" class="input" required>
               <option value="Select From List">Select From List</option>
               <option value="Grader">Grader</option>
@@ -141,7 +148,7 @@
       </form>
     </section>
   </div>
-  <!-- <script>
+  <script>
     document
       .getElementById("application-form")
       .addEventListener("submit", function (event) {
@@ -171,64 +178,64 @@
           event.preventDefault(); // Prevent the form from being submitted immediately
         }
       });
-  </script> -->
+  </script>
 
 
-<script>
-  // Function to check if a required field is empty
-  function isFieldEmpty(field) {
-  if (
-    (field.tagName === 'INPUT' || field.tagName === 'TEXTAREA') &&
-    (field.value.trim() === '' || field.value === field.getAttribute('placeholder'))
-  ) {
-    // Check if the value is empty or matches the placeholder text
-    return true;
-  } else if (field.tagName === 'SELECT') {
-    // Check if the selected value is the default "Select From List" option
-    return field.value === 'Select From List';
-  } else {
-    return false;
-  }
-}
-
-
-
-  // Function to toggle visibility of the invalid-field class for inputs
-  function toggleInvalidField(field, isVisible) {
-    if (isVisible) {
-      field.classList.add('invalid-field'); // Add a class to style the input as invalid
-    } else {
-      field.classList.remove('invalid-field'); // Remove the class when the field is filled
+  <script>
+    // Function to check if a required field is empty
+    function isFieldEmpty(field) {
+      if (
+        (field.tagName === 'INPUT' || field.tagName === 'TEXTAREA') &&
+        (field.value.trim() === '' || field.value === field.getAttribute('placeholder'))
+      ) {
+        // Check if the value is empty or matches the placeholder text
+        return true;
+      } else if (field.tagName === 'SELECT') {
+        // Check if the selected value is the default "Select From List" option
+        return field.value === 'Select From List';
+      } else {
+        return false;
+      }
     }
-  }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Add event listener to the submit button
-    document.querySelector('.btn').addEventListener('click', function (event) {
-      // Prevent the form from submitting immediately
-      event.preventDefault();
 
-      let isAllFieldsFilled = true;
 
-      // Check each required field
-      document.querySelectorAll('.input[required], textarea[required], select[required]').forEach(field => {
-        if (isFieldEmpty(field)) {
-          // Show the required label if field is empty
-          toggleInvalidField(field, true);
-          isAllFieldsFilled = false;
-        } else {
-          // Hide the required label if field is filled
-          toggleInvalidField(field, false);
+    // Function to toggle visibility of the invalid-field class for inputs
+    function toggleInvalidField(field, isVisible) {
+      if (isVisible) {
+        field.classList.add('invalid-field'); // Add a class to style the input as invalid
+      } else {
+        field.classList.remove('invalid-field'); // Remove the class when the field is filled
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Add event listener to the submit button
+      document.querySelector('.btn').addEventListener('click', function (event) {
+        // Prevent the form from submitting immediately
+        event.preventDefault();
+
+        let isAllFieldsFilled = true;
+
+        // Check each required field
+        document.querySelectorAll('.input[required], textarea[required], select[required]').forEach(field => {
+          if (isFieldEmpty(field)) {
+            // Show the required label if field is empty
+            toggleInvalidField(field, true);
+            isAllFieldsFilled = false;
+          } else {
+            // Hide the required label if field is filled
+            toggleInvalidField(field, false);
+          }
+        });
+
+        // Submit the form if all required fields are filled
+        if (isAllFieldsFilled) {
+          document.getElementById("application-form").submit();
         }
       });
-
-      // Submit the form if all required fields are filled
-      if (isAllFieldsFilled) {
-        document.getElementById("application-form").submit();
-      }
     });
-  });
-</script>
+  </script>
 
 
 
@@ -240,4 +247,3 @@
 
 
 </body>
-
