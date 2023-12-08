@@ -27,7 +27,6 @@ exports.homepage = async (req, res) => {
   try {
     let joblist;
 
-    // Check if the form was submitted and contains the 'title' field
     if (req.body.title) {
       // Perform a case-insensitive search for the job title in the database
       joblist = await Job.find({
@@ -48,7 +47,7 @@ exports.homepage = async (req, res) => {
       user: req.session.user,
       title: "Home",
       layout: "./layouts/main",
-      joblist: joblist, // Pass the filtered joblist data to the 'index' template
+      joblist: joblist, 
     });
   } catch (error) {
     console.error(error);
@@ -121,7 +120,7 @@ exports.admin = async (req, res) => {
       user: req.session.user,
       title: "Admin",
       layout: "./layouts/main",
-      applicantList, // Pass the joblist data to the 'adminJobList' template
+      applicantList, // Pass the joblist data to the 'adminJobList' 
     });
   }
 };
@@ -193,7 +192,6 @@ exports.studentApp = async (req, res) => {
 };
 
 //////////////////////  POST /////////////////////////////////////////
-// login route
 
 exports.postUpdateStatus = async (req, res) => {
   const { status } = req.body;
@@ -213,7 +211,6 @@ exports.postUpdateStatus = async (req, res) => {
     foundApplicant.status = status;
     const updatedApplicant = await foundApplicant.save();
 
-    // res.status(200).json({ success: true, data: updatedApplicant });
     res.redirect("/admin");
   } catch (error) {
     console.error(error);
@@ -403,12 +400,6 @@ exports.postApply = async (req, res) => {
     return res.redirect("jobs");
   
 };
-
-
-
-
-
-
 
 exports.postDeleteApplicant = async (req, res) => {
   const id = req.params.id;

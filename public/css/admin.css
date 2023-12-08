@@ -1,16 +1,16 @@
 #applicantTable {
-    width: 80%; /* Adjust the value as needed */
-    margin: 0 auto; /* Center the table */
+    width: 80%; 
+    margin: 0 auto; 
 }
 
 #applicantTable td,
 #applicantTable th {
-    padding: 8px; /* Adjust the padding as needed */
+    padding: 8px; 
 }
 
 @media (max-width: 767px) {
     #applicantTable {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; 
     }
 
     #applicantTable td,

@@ -1,41 +1,48 @@
-
 <div class="breadcrumbs 123">
     <div class="content-wrapper">
-    <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/apply">Apply</a>
+        <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/apply">Apply</a>
     </div>
-  </div>
+</div>
+
 <body>
     <div class="application-container">
         <section class="application-form">
             <form action="/editApplicant/<%= applicantData._id %>" method="post">
-                <h3>Editing <%= applicantData.fName %> <%= applicantData.surname %></h3>
+                <h3>Editing <%= applicantData.fName %>
+                        <%= applicantData.surname %>
+                </h3>
                 <p>Update applicant information:</p>
-                <!-- Add a hidden input field to store the applicant's ID for updating -->
                 <input type="hidden" name="id" value="<%= applicantData._id %>">
 
                 <div class="box">
                     <label for="fName">First Name</label>
-                    <input type="text" id="fName" name="fName" class="input" required value="<%= applicantData.fName %>">
+                    <input type="text" id="fName" name="fName" class="input" required
+                        value="<%= applicantData.fName %>">
                 </div>
                 <div class="box">
                     <label for="surname">Surname</label>
-                    <input type="text" id="surname" name="surname" class="input" required value="<%= applicantData.surname %>">
+                    <input type="text" id="surname" name="surname" class="input" required
+                        value="<%= applicantData.surname %>">
                 </div>
                 <div class="box">
                     <label for="studentID">Student ID</label>
-                    <input type="text" id="studentID" name="studentID" class="input" required value="<%= applicantData.studentID %>">
+                    <input type="text" id="studentID" name="studentID" class="input" required
+                        value="<%= applicantData.studentID %>">
                 </div>
                 <div class="box">
                     <label for="email">UMKC Email</label>
-                    <input type="email" id="email" name="email" class="input" required value="<%= applicantData.email %>">
+                    <input type="email" id="email" name="email" class="input" required
+                        value="<%= applicantData.email %>">
                 </div>
                 <div class="box">
                     <label for="level">Current Level (BS/MS/PhD)</label>
-                    <input type="text" id="level" name="level" class="input" required value="<%= applicantData.level %>">
+                    <input type="text" id="level" name="level" class="input" required
+                        value="<%= applicantData.level %>">
                 </div>
                 <div class="box">
                     <label for="graduatingSemester">Graduating Semester</label>
-                    <input type="text" id="graduatingSemester" name="graduatingSemester" class="input" required value="<%= applicantData.graduatingSemester %>">
+                    <input type="text" id="graduatingSemester" name="graduatingSemester" class="input" required
+                        value="<%= applicantData.graduatingSemester %>">
                 </div>
                 <div class="box">
                     <label for="graduatingSemester">UMKC Cumulative GPA </label>
@@ -43,29 +50,35 @@
                 </div>
                 <div class="box">
                     <label for="hours">Hours Completed at UMKC </label>
-                    <input type="text" id="hours" name="hours" class="input" required value="<%= applicantData.hours %>">
+                    <input type="text" id="hours" name="hours" class="input" required
+                        value="<%= applicantData.hours %>">
                 </div>
                 <div class="box">
                     <label for="degree">Undergraduate Degree </label>
-                    <input type="text" id="degree" name="degree" class="input" required value="<%= applicantData.degree %>">
+                    <input type="text" id="degree" name="degree" class="input" required
+                        value="<%= applicantData.degree %>">
                 </div>
                 <div class="box">
                     <label for="major">Current Major (CS/IT/ECE/EE)</label>
-                    <input type="text" id="major" name="major" class="input" required value="<%= applicantData.major %>">
+                    <input type="text" id="major" name="major" class="input" required
+                        value="<%= applicantData.major %>">
                 </div>
                 <div class="box">
                     <label for="applyingFor">Applying For: (Grader, Lab Instructor or Both)</label>
-                    <input type="text" id="applyingFor" name="applyingFor" class="input" required value="<%= applicantData.applyingFor %>">
+                    <input type="text" id="applyingFor" name="applyingFor" class="input" required
+                        value="<%= applicantData.applyingFor %>">
                 </div>
                 <div class="box">
                     <label for="GTA">International Students ONLY: Are you GTA Certified?</label>
                     <input type="text" id="GTA" name="GTA" class="input" required value="<%= applicantData.GTA %>">
                 </div>
                 <div class="box">
-                    <label for="courses">Courses you could serve as lab instructor or grade for (ex. CS 201L/CS 5525/ECE 216, etc.)</label>
-                    <input type="text" id="courses" name="courses" class="input" required value="<%= applicantData.courses %>">
+                    <label for="courses">Courses you could serve as lab instructor or grade for (ex. CS 201L/CS 5525/ECE
+                        216, etc.)</label>
+                    <input type="text" id="courses" name="courses" class="input" required
+                        value="<%= applicantData.courses %>">
                 </div>
-             
+
                 <button class="btn" type="submit">Update</button>
             </form>
         </section>

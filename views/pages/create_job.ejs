@@ -1,31 +1,30 @@
 <div class="breadcrumbs 123">
     <div class="content-wrapper">
-    <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/create_job">Create Job</a>
+        <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/create_job">Create
+            Job</a>
     </div>
-  </div>
+</div>
 
-  <style>
+<style>
     .btn-primary {
-   /* Match classes from the Apply button */
-   /* Use styles that are applicable to an input element */
-   display: inline-block;
-   padding: 10px 20px;
-   border-radius: 5px;
-   text-align: center;
-   font-size: 16px;
-   color: white;
-   background-color: #0a58ca;
-   border: none;
-   cursor: pointer;
-   text-decoration: none;
-   margin-bottom: 20px; /* Adjust as needed */
- }
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 16px;
+        color: white;
+        background-color: #0a58ca;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
 
- .btn-primary:hover {
-  color: white;
-  background-color: #04487f;
- }
-</style> 
+    .btn-primary:hover {
+        color: white;
+        background-color: #04487f;
+    }
+</style>
 
 <body>
     <div class="container">
@@ -59,12 +58,13 @@
                                 <label for="location">Job Location</label>
                                 <input type="text" name="location" id="location" placeholder="Job Location" required />
                             </div>
-                            
+
                             <div class="col-sm-6">
                                 <label for="description">Job Description</label>
-                                <textarea name="description" id="description" class="form-control" cols="15" rows="5" placeholder="Job Description" required></textarea>
+                                <textarea name="description" id="description" class="form-control" cols="15" rows="5"
+                                    placeholder="Job Description" required></textarea>
                             </div>
-                            
+
                             <div class="col-sm-6 py-2">
                                 <label for="payRate">Job Salary</label>
                                 <input type="text" name="payRate" id="payRate" placeholder="Job Salary" required />
@@ -87,22 +87,24 @@
 
                             <div class="col-sm-6">
                                 <label for="dateposted">Job Posted On</label>
-                                <input type="text" name="dateposted" id="dateposted" placeholder="MM/DD/YYYY" maxLength="10" required />
-                                    <span id="datepostedError" class="text-danger"></span>
+                                <input type="text" name="dateposted" id="dateposted" placeholder="MM/DD/YYYY"
+                                    maxLength="10" required />
+                                <span id="datepostedError" class="text-danger"></span>
                             </div>
                             <div class="col-sm-6 py-2">
                                 <label for="deadline">Job Deadline</label>
-                                <input type="text" name="deadline" id="deadline" placeholder="MM/DD/YYYY" maxLength="10" required />
+                                <input type="text" name="deadline" id="deadline" placeholder="MM/DD/YYYY" maxLength="10"
+                                    required />
                                 <span id="deadlineError" class="text-danger"></span>
                             </div>
                             <center>
-                            <div class="col-sm-6 text-lg-end py-2">
-                                <button type="submit" class="btn btn-primary">
-                                    Submit
-                                </button>
-                            </div>
+                                <div class="col-sm-6 text-lg-end py-2">
+                                    <button type="submit" class="btn btn-primary">
+                                        Submit
+                                    </button>
+                                </div>
                             </center>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -112,29 +114,29 @@
 
     </div>
 
-<script>
-document.querySelector('form').addEventListener('submit', function(e) {
-    let dateposted = document.getElementById('dateposted').value;
-    let deadline = document.getElementById('deadline').value;
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            let dateposted = document.getElementById('dateposted').value;
+            let deadline = document.getElementById('deadline').value;
 
-    let isDatepostedValid = validateDate(dateposted, 'datepostedError');
-    let isDeadlineValid = validateDate(deadline, 'deadlineError');
+            let isDatepostedValid = validateDate(dateposted, 'datepostedError');
+            let isDeadlineValid = validateDate(deadline, 'deadlineError');
 
-    if (!isDatepostedValid || !isDeadlineValid) {
-        e.preventDefault();
-    }
-});
+            if (!isDatepostedValid || !isDeadlineValid) {
+                e.preventDefault();
+            }
+        });
 
-function validateDate(date, errorElementId) {
-    if (!/^\d{2}\/\d{2}\/\d{4}$/.test(date)) {
-        document.getElementById(errorElementId).textContent = "Error: Date must be mm/dd/yyyy";
-        return false;
-    } else {
-        document.getElementById(errorElementId).textContent = "";
-        return true;
-    }
-}
+        function validateDate(date, errorElementId) {
+            if (!/^\d{2}\/\d{2}\/\d{4}$/.test(date)) {
+                document.getElementById(errorElementId).textContent = "Error: Date must be mm/dd/yyyy";
+                return false;
+            } else {
+                document.getElementById(errorElementId).textContent = "";
+                return true;
+            }
+        }
 
-</script>
+    </script>
 
 </body>

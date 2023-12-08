@@ -5,7 +5,7 @@
 #applicantTable td,
 #applicantTable th {
     padding: 8px;
-    text-align: center; /* Center text in cells */
+    text-align: center; 
 }
 
 @media (max-width: 767px) {

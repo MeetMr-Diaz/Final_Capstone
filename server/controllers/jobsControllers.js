@@ -48,10 +48,6 @@ exports.jobs = async (req, res) => {
     const id = req.params.id;
     const user = req.session.user;
   
-    // if (!mongoose.Types.ObjectId.isValid(id)) {
-    //   return res.status(400).json({ success: false, error: "Invalid job ID" });
-    // }
-  
     try {
       let jobData = await Job.findById(id); // Ensure the query is awaited
   
@@ -71,7 +67,6 @@ exports.jobs = async (req, res) => {
   };
 
 
-
   exports.postEditJob = async (req, res) => {
     const id = req.params.id;
   
@@ -81,7 +76,7 @@ exports.jobs = async (req, res) => {
   
     try {
       // Fetch the job data based on the ID from your database
-      const jobData = await Job.findById(id); // Ensure your model is named 'Job' with a capital 'J'
+      const jobData = await Job.findById(id); 
   
       if (jobData) {
         // Update the job's data based on the form submission
