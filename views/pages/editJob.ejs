@@ -1,8 +1,9 @@
 <div class="breadcrumbs 123">
     <div class="content-wrapper">
-    <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/editJob">Edit Job</a>
+        <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/editJob">Edit
+            Job</a>
     </div>
-  </div>
+</div>
 
 <body>
     <div class="container">
@@ -19,7 +20,8 @@
                             <div class="col-sm-6">
                                 <!-- Use the label and input elements from the first code -->
                                 <label for="JobTitle">Job Title</label>
-                                <input type="text" name="JobTitle" id="JobTitle" placeholder="Job Title" required value ="<%= job.JobTitle %>">
+                                <input type="text" name="JobTitle" id="JobTitle" placeholder="Job Title" required
+                                    value="<%= job.JobTitle %>">
                             </div>
 
 
@@ -32,7 +34,8 @@
                             <div class="col-sm-6">
                                 <!-- Use the label and input elements from the first code -->
                                 <label for="jobType">Job Type</label>
-                                <input type="text" name="jobType" id="jobType" placeholder="Job Type" required value ="<%= job.jobType %>">
+                                <input type="text" name="jobType" id="jobType" placeholder="Job Type" required
+                                    value="<%= job.jobType %>">
                             </div>
 
                             <div class="col-sm-6">
@@ -44,26 +47,29 @@
                             <div class="col-sm-6 ">
                                 <!-- Use the label and input elements from the first code -->
                                 <label for="location">Job Location</label>
-                                <input type="text" name="location" id="location" placeholder="Job Location" required value="<%= job.location %>">
+                                <input type="text" name="location" id="location" placeholder="Job Location" required
+                                    value="<%= job.location %>">
                             </div>
-                            
+
                             <div class="col-sm-6">
                                 <label for="description">Job Description</label>
-                                <textarea name="description" id="description" class="form-control" cols="15" rows="5" placeholder="Job Description" required><%= job.description %></textarea>
+                                <textarea name="description" id="description" class="form-control" cols="15" rows="5"
+                                    placeholder="Job Description" required><%= job.description %></textarea>
 
                             </div>
-                            
+
                             <div class="col-sm-6 py-2">
                                 <!-- Use the label and input elements from the first code -->
                                 <label for="payRate">Job Salary</label>
-                                <input type="text" name="payRate" id="payRate" placeholder="Job Salary" required value="<%= job.payRate %>">
+                                <input type="text" name="payRate" id="payRate" placeholder="Job Salary" required
+                                    value="<%= job.payRate %>">
                             </div>
 
                             <div class="col-sm-6 py-2">
                                 <!-- Use the label and input elements from the first code -->
                                 <label for="education">Job Education</label>
-                                <input type="text" name="education" id="education" placeholder="Job Education"
-                                    required value="<%= job.education %>">
+                                <input type="text" name="education" id="education" placeholder="Job Education" required
+                                    value="<%= job.education %>">
                             </div>
                             <div class="col-sm-6">
                                 <!-- Use the label and input elements from the first code -->
@@ -74,19 +80,22 @@
                             <div class="col-sm-6">
                                 <!-- Use the label and input elements from the first code -->
                                 <label for="skills">Job Skills</label>
-                                <input type="text" name="skills" id="skills" placeholder="Job Skills" required value="<%= job.skills %>">
+                                <input type="text" name="skills" id="skills" placeholder="Job Skills" required
+                                    value="<%= job.skills %>">
                             </div>
 
                             <div class="col-sm-6">
                                 <!-- Use the label and input elements from the first code -->
                                 <label for="dateposted">Job Posted On</label>
-                                <input type="text" name="dateposted" id="dateposted" placeholder="MM/DD/YYYY" maxLength="10" required value="<%= job.datepostedFmt %>">
-                                    <span id="datepostedError" class="text-danger"></span>
+                                <input type="text" name="dateposted" id="dateposted" placeholder="MM/DD/YYYY"
+                                    maxLength="10" required value="<%= job.datepostedFmt %>">
+                                <span id="datepostedError" class="text-danger"></span>
                             </div>
                             <div class="col-sm-6 py-2">
                                 <!-- Use the label and input elements from the first code -->
                                 <label for="deadline">Job Deadline</label>
-                                <input type="text" name="deadline" id="deadline" placeholder="MM/DD/YYYY" maxLength="10" required value="<%= job.deadlineFmt %>">
+                                <input type="text" name="deadline" id="deadline" placeholder="MM/DD/YYYY" maxLength="10"
+                                    required value="<%= job.deadlineFmt %>">
                                 <span id="deadlineError" class="text-danger"></span>
                             </div>
                             <!-- Change "Apply" to "Submit" -->
@@ -95,39 +104,37 @@
                                     Submit
                                 </button>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
             </div>
         </form>
-
-
     </div>
 
-<script>
-document.querySelector('form').addEventListener('submit', function(e) {
-    let dateposted = document.getElementById('dateposted').value;
-    let deadline = document.getElementById('deadline').value;
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            let dateposted = document.getElementById('dateposted').value;
+            let deadline = document.getElementById('deadline').value;
 
-    let isDatepostedValid = validateDate(dateposted, 'datepostedError');
-    let isDeadlineValid = validateDate(deadline, 'deadlineError');
+            let isDatepostedValid = validateDate(dateposted, 'datepostedError');
+            let isDeadlineValid = validateDate(deadline, 'deadlineError');
 
-    if (!isDatepostedValid || !isDeadlineValid) {
-        e.preventDefault();
-    }
-});
+            if (!isDatepostedValid || !isDeadlineValid) {
+                e.preventDefault();
+            }
+        });
 
-function validateDate(date, errorElementId) {
-    if (!/^\d{2}\/\d{2}\/\d{4}$/.test(date)) {
-        document.getElementById(errorElementId).textContent = "Error: Date must be mm/dd/yyyy";
-        return false;
-    } else {
-        document.getElementById(errorElementId).textContent = "";
-        return true;
-    }
-}
+        function validateDate(date, errorElementId) {
+            if (!/^\d{2}\/\d{2}\/\d{4}$/.test(date)) {
+                document.getElementById(errorElementId).textContent = "Error: Date must be mm/dd/yyyy";
+                return false;
+            } else {
+                document.getElementById(errorElementId).textContent = "";
+                return true;
+            }
+        }
 
-</script>
+    </script>
 
 </body>

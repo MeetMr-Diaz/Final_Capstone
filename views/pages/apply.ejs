@@ -1,11 +1,10 @@
-
 <body>
   <div class="breadcrumbs 123">
     <div class="content-wrapper">
-    <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> 
+      <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a>
     </div>
   </div>
-  
+
   <div class="application-container">
     <section class="application-form">
       <form id="application-form" action="/apply" method="post">
@@ -17,9 +16,6 @@
           <br />
           Spring 2024 Employment no later than 5:00 PM, Friday, October 8th.
         </p>
-
-
-
 
         <div class="flex">
           <div class="box">
@@ -46,9 +42,6 @@
             <input type="classNum" id="classNum" name="classNum" placeholder="Class Number" class="input" required />
           </div>
 
-
-
-
           <div class="box">
             <label for="level">Current Level (BS/MS/PhD)</label>
             <select id="level" name="level" class="input" required>
@@ -58,7 +51,6 @@
               <option value="PhD">PhD</option>
             </select>
           </div>
-
 
           <div class="box">
             <label for="graduatingSemester">Graduating Semester</label>
@@ -70,22 +62,17 @@
             </select>
           </div>
 
-
-
-
           <div class="box">
             <label for="GPA">UMKC Cumulative GPA (leave blank if first semester is in
               progress)</label>
             <input type="GPA" id="GPA" name="GPA" placeholder="GPA" class="input" required />
           </div>
 
-
           <div class="box">
             <label for="hours">Hours Completed at UMKC (leave blank if first semester is in
               progress)</label>
             <input type="hours" id="hours" name="hours" placeholder="Hours" class="input" required />
           </div>
-
 
           <div class="box">
             <label for="degree">Undergraduate Degree (if applicable)</label>
@@ -98,9 +85,6 @@
             </select>
           </div>
 
-
-
-
           <div class="box">
             <label for="major">Current Major (CS/IT/ECE/EE)</label>
             <select id="major" name="major" class="input" required>
@@ -112,9 +96,6 @@
             </select>
           </div>
 
-
-
-
           <div class="box">
             <label for="applyingFor">Applying For: (Grader, Lab Instructor, or Both)</label>
             <select id="applyingFor" name="applyingFor" class="input" required>
@@ -124,7 +105,6 @@
               <option value="Both">Both</option>
             </select>
           </div>
-
 
           <div class="box">
             <label for="GTA">International Students ONLY: Are you GTA Certified?</label>
@@ -141,10 +121,8 @@
             <textarea id="courses" name="courses" placeholder="Courses" class="input" required rows="4"></textarea>
           </div>
 
-
           <button class="btn" type="submit">Submit</button>
         </div>
-
       </form>
     </section>
   </div>
@@ -155,15 +133,11 @@
         const gtaCertifiedInput = document.getElementById("GTA");
         const applyingForInput = document.getElementById("applyingFor");
 
-
-
-
         if (gtaCertifiedInput.value.toLowerCase() === "no") {
           // Display a warning message with two options
           const warningMessage =
             "You are not GTA certified. Choose an option:\n\n1. Redirect to certification page?\n2. Go back to the jobs list?";
           const userChoice = prompt(warningMessage);
-
 
           if (userChoice === "1") {
             // Redirect the user to the provided link
@@ -174,12 +148,10 @@
             window.location.href = "/jobs"; // Update with the correct URL
           }
 
-
           event.preventDefault(); // Prevent the form from being submitted immediately
         }
       });
   </script>
-
 
   <script>
     // Function to check if a required field is empty
@@ -197,8 +169,6 @@
         return false;
       }
     }
-
-
 
     // Function to toggle visibility of the invalid-field class for inputs
     function toggleInvalidField(field, isVisible) {

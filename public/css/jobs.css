@@ -1,0 +1,17 @@
+  .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      align-items: flex-start;
+      justify-content: center;
+  }
+
+  .job-details {
+      background-color: var(--white);
+      border-radius: .5rem;
+      border: var(--border);
+      padding: 2rem;
+      box-shadow: var(--box-shadow);
+      overflow-x: hidden;
+  }
+  

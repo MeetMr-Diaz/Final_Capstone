@@ -1,8 +1,9 @@
 <div class="breadcrumbs 123">
     <div class="content-wrapper">
-    <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/admin">Application Status</a>
+        <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/admin">Application
+            Status</a>
     </div>
-  </div>
+</div>
 
 <head>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
@@ -13,62 +14,90 @@
         <div class="row">
             <div class="col-sm-12">
                 <h1>Student Dashboard</h1>
-                <!-- <div class="umkc-btn umkc-btn-dark button-2 my-5" role="button" tabindex="0">
-                    <a class="text-umkc-white py-3" href="/editApplicant">Edit Application</a>
-                </div> -->
                 <div class="table-responsive">
-                <table id="applicantTable" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>First Name</th>
-                            <th>Surname</th>
-                            <th>Student ID</th>
-                            <th>UMKC Email</th>
-                            <th>Current Level (BS/MS/PhD)</th>
-                            <th>Graduating Semester</th>
-                            <th>UMKC Cumulative GPA</th>
-                            <th>Hours Completed at UMKC</th>
-                            <th>Undergraduate Degree (BTEC,BSCS,IT)</th>
-                            <th>Current Major (CS/IT/ECE/EE)</th>
-                            <th>Applying For</th>
-                            <th>GTA Certified</th>
-                            <th>Courses Able to Teach</th>
-                            <th>Application Status</th>
-                            <th>Edit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% applicants.forEach(applicant => { %>
+                    <table id="applicantTable" class="table table-striped">
+                        <thead>
                             <tr>
-                                <td><%= applicant.fName %></td>
-                                <td><%= applicant.surname %></td>
-                                <td><%= applicant.studentID %></td>
-                                <td><%= applicant.email %></td>
-                                <td><%= applicant.level %></td>
-                                <td><%= applicant.graduatingSemester %></td>
-                                <td><%= applicant.GPA %></td>
-                                <td><%= applicant.hours %></td>
-                                <td><%= applicant.degree %></td>
-                                <td><%= applicant.major %></td>
-                                <td><%= applicant.applyingFor %></td>
-                                <td><%= applicant.GTA %></td>
-                                <td><%= applicant.courses %></td>
-                                <td><%= applicant.status %></td>
-                                <td><form action="/editApplicant/<%= applicant._id %>" method="GET">
-                                    <button type="submit" class="btn btn-primary">Edit</button>
-                                  </form></td>
-                                
+                                <th>First Name</th>
+                                <th>Surname</th>
+                                <th>Student ID</th>
+                                <th>UMKC Email</th>
+                                <th>Current Level (BS/MS/PhD)</th>
+                                <th>Graduating Semester</th>
+                                <th>UMKC Cumulative GPA</th>
+                                <th>Hours Completed at UMKC</th>
+                                <th>Undergraduate Degree (BTEC,BSCS,IT)</th>
+                                <th>Current Major (CS/IT/ECE/EE)</th>
+                                <th>Applying For</th>
+                                <th>GTA Certified</th>
+                                <th>Courses Able to Teach</th>
+                                <th>Application Status</th>
+                                <th>Edit</th>
                             </tr>
-                        <% }); %>
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody>
+                            <% applicants.forEach(applicant=> { %>
+                                <tr>
+                                    <td>
+                                        <%= applicant.fName %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.surname %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.studentID %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.email %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.level %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.graduatingSemester %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.GPA %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.hours %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.degree %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.major %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.applyingFor %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.GTA %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.courses %>
+                                    </td>
+                                    <td>
+                                        <%= applicant.status %>
+                                    </td>
+                                    <td>
+                                        <form action="/editApplicant/<%= applicant._id %>" method="GET">
+                                            <button type="submit" class="btn btn-primary">Edit</button>
+                                        </form>
+                                    </td>
+
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="photo-tiles-outro">
-        <a class="text-umkc-white py-3"></a></div>
+        <a class="text-umkc-white py-3"></a>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" charset="utf8"
@@ -80,5 +109,3 @@
         });
     </script>
 </body>
-
-

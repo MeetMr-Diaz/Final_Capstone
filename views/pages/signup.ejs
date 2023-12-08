@@ -1,47 +1,47 @@
 <div class="breadcrumbs 123">
-   <div class="content-wrapper">
-   <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/signup">Registration</a>
-   </div>
- </div>
+  <div class="content-wrapper">
+    <a href="https://www.umkc.edu/index.html">Home</a> / <a href="/">GTA/Grader</a> / <a href="/signup">Registration</a>
+  </div>
+</div>
 
- <style>
-   .login-button {
-  /* Match classes from the Apply button */
-  /* Use styles that are applicable to an input element */
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 16px;
-  color: white;
-  background-color: #0a58ca;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  margin-bottom: 20px; /* Adjust as needed */
-}
+<style>
+  .login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: #0a58ca;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+    /* Adjust as needed */
+  }
 
-.login-button:hover {
- color: white;
- background-color: #04487f;
-}
-</style> 
+  .login-button:hover {
+    color: white;
+    background-color: #04487f;
+  }
+</style>
 
 <div class="account-form-container">
   <section class="account-form">
 
-     <!-- Registration Form -->
-     <form id="student-login-form" action="/sign_up" method="post">
-        <h3>Registration</h3>
-        <nav class="navbar">
-        </nav>
-        <input type="text" required name="name" maxlength="50" placeholder="Enter your name" class="input">
-        <input type="email" required name="email" maxlength="50" placeholder="Enter your email" class="input">
-        <input type="password" required name="password" maxlength="20" placeholder="Enter your password" class="input">
-        <input type="password" required name="confirmPassword" maxlength="20" placeholder="Confirm you password" class="input">
-        <input type="hidden" name="role" value="student">
-        <input type="submit" value="Register" name="submit" class="btn login-button">
-     </form>
+    <!-- Registration Form -->
+    <form id="student-login-form" action="/sign_up" method="post">
+      <h3>Registration</h3>
+      <nav class="navbar">
+      </nav>
+      <input type="text" required name="name" maxlength="50" placeholder="Enter your name" class="input">
+      <input type="email" required name="email" maxlength="50" placeholder="Enter your email" class="input">
+      <input type="password" required name="password" maxlength="20" placeholder="Enter your password" class="input">
+      <input type="password" required name="confirmPassword" maxlength="20" placeholder="Confirm you password"
+        class="input">
+      <input type="hidden" name="role" value="student">
+      <input type="submit" value="Register" name="submit" class="btn login-button">
+    </form>
 
   </section>
 </div>
